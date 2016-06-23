@@ -1,5 +1,6 @@
 // se crea un servidor http automaticamente
-var io = require('socket.io')(8080);
+//var io = require('socket.io')(8080);
+var io = require('socket.io')(process.env.PORT);
 
 // recibe un objeto socket cada que un cliente se conectta
 io.on('connection', function (objSocket) {
